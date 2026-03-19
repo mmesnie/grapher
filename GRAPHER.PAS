@@ -1,5 +1,8 @@
 {$N+}
 
+{INITGRAPH (line 79) must point to Turbo Pascal's BGI directory}
+
+{ Options -> Directories -> Unit directories points to TP's units directory }
 
 PROGRAM GRAPHICS(INPUT,OUTPUT);
 
@@ -73,7 +76,7 @@ VAR
     BEGIN
       NOSOUND;
       GRAPHDRIVER:=DETECT;
-      INITGRAPH(GRAPHDRIVER,GRAPHMODE,'c:\tp\bgi');
+      INITGRAPH(GRAPHDRIVER,GRAPHMODE,'c:\usr\tp\bgi');
       RESTORECRTMODE;
       RIGHT:=GETMAXX;
       BOTTOM:=GETMAXY;
